@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Super Friends</h1>
+    <div class="toolbar">
+      <button id="poll-now" title="Check now">↻</button>
+      <button id="settings-btn" title="Settings">⚙</button>
+    </div>
+  </header>
+
+  <section id="recent" class="panel">
+    <h2>Recent posts</h2>
+    <div id="recent-list" class="list">
+      <p class="empty">No new posts yet.</p>
+    </div>
+  </section>
+
+  <section id="friends" class="panel">
+    <h2>Super Friends (<span id="friend-count">0</span> / 150)</h2>
+    <p id="dunbar-warning" class="dunbar-warning hidden">
+      You've passed Dunbar's 150 — that's a lot of humans to keep track of.
+    </p>
+    <div id="friends-list" class="list">
+      <p class="empty">Star a creator on suno.com to add them.</p>
+    </div>
+  </section>
+
+  <section id="settings" class="panel hidden">
+    <h2>Settings</h2>
+    <label>
+      Your Suno handle
+      <input id="own-handle" type="text" placeholder="spankie0001" />
+    </label>
+    <label>
+      Poll every
+      <select id="poll-interval">
+        <option value="5">5 minutes</option>
+        <option value="15" selected>15 minutes</option>
+        <option value="30">30 minutes</option>
+        <option value="60">1 hour</option>
+      </select>
+    </label>
+    <p id="last-check" class="muted"></p>
+
+    <h3 class="settings-subhead">Backup</h3>
+    <p class="muted backup-blurb">
+      Export your Super Friends list to a JSON file. Restore from a backup if Chrome ever wipes your data or to move between devices.
+    </p>
+    <div class="backup-row">
+      <button id="export-btn">Export friends</button>
+      <button id="import-btn">Import friends</button>
+      <input id="import-file" type="file" accept=".json,application/json" hidden />
+    </div>
+    <p id="backup-status" class="muted backup-status"></p>
+
+    <button id="settings-close" class="settings-done">Done</button>
+  </section>
+
+  <footer id="status" class="muted"></footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
