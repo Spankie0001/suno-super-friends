@@ -23,7 +23,7 @@ This is a developer-mode extension. There's no Chrome Web Store listing.
 1. Download or clone this repo
 2. Open `chrome://extensions/` (or `edge://extensions/`)
 3. Toggle **Developer mode** on (top right)
-4. Click **Load unpacked** and select the `super-friends/` folder
+4. Click **Load unpacked** and select the folder that contains `manifest.json` (the repo root)
 5. Pin the extension to your toolbar (puzzle-piece icon → pin Super Friends)
 
 ## First-time setup
@@ -47,7 +47,7 @@ This is a developer-mode extension. There's no Chrome Web Store listing.
 
 To update:
 1. Download the new files
-2. **Overwrite the contents** of your existing `super-friends/` folder (don't change the folder location)
+2. **Overwrite the contents** of your existing extension folder, the one containing `manifest.json` (don't change the folder location)
 3. Go to `chrome://extensions/` and click the ↻ reload icon on the Super Friends card
 4. Refresh any open suno.com tabs (otherwise their content scripts run old code)
 
